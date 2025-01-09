@@ -1,3 +1,4 @@
+// Hero.jsx
 import React from 'react';
 import './Hero.scss';
 
@@ -64,6 +65,7 @@ const Hero = () => {
             />
             <button className="hero__search-button">Search</button>
           </div>
+          <p className="hero__search-text">Search for 148+ job positions across the world</p>
         </div>
       </div>
     </div>
