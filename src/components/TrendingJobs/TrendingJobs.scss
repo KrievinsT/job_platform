@@ -1,0 +1,167 @@
+.trending-jobs {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+  
+      h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #111827;
+      }
+    }
+  
+    &__see-all {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: none;
+      border: none;
+      color: #111827;
+      cursor: pointer;
+      font-size: 0.875rem;
+  
+      .dots {
+        font-size: 1.25rem;
+        line-height: 1;
+      }
+    }
+  
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+  }
+  
+  .job-card {
+    background: white;
+    border-radius: 1rem;
+    padding: 1.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+  
+    &:hover {
+      transform: translateY(-2px);
+    }
+  
+    &__icon-wrapper {
+      background: #F3F4F6;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 0.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+  
+    &__icon {
+      width: 1.25rem;
+      height: 1.25rem;
+      color: #111827;
+    }
+  
+    &__title {
+      font-size: 1.125rem;
+      font-weight: 600;
+      color: #111827;
+      margin-bottom: 0.5rem;
+    }
+  
+    &__details {
+      color: #6B7280;
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+  
+      .separator {
+        margin: 0 0.5rem;
+      }
+    }
+  
+    &__salary {
+      display: flex;
+      gap: 0.5rem;
+      align-items: baseline;
+  
+      .amount {
+        font-weight: 600;
+        color: #111827;
+      }
+  
+      .label {
+        color: #6B7280;
+        font-size: 0.875rem;
+      }
+    }
+  }
+  
+  .explore-section {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 2rem;
+    border-radius: 1rem;
+    overflow: hidden;
+  
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  
+    &__content {
+      background: #F9FAFB;
+      padding: 2.5rem;
+      border-radius: 1rem;
+    }
+  
+    &__label {
+      color: #6B7280;
+      font-size: 0.875rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+  
+    &__title {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #111827;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+  
+    &__description {
+      color: #4B5563;
+      line-height: 1.5;
+    }
+  
+    &__tags {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-content: flex-start;
+      background: linear-gradient(135deg, #D05D85 0%, #6C24A3 50%, #FF6B00 100%);
+      padding: 2.5rem;
+      border-radius: 1rem;
+  
+      .tag {
+        background: white;
+        padding: 0.5rem 1rem;
+        border-radius: 9999px;
+        font-size: 0.875rem;
+        color: #111827;
+        cursor: pointer;
+        transition: all 0.2s ease;
+  
+        &:hover {
+          background: rgba(255, 255, 255, 0.9);
+          transform: translateY(-1px);
+        }
+      }
+    }
+  }
