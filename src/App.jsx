@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
 import Separator from './components/Separator/Separator';
 import TrendingJobs from './components/TrendingJobs/TrendingJobs';
+import Team from './components/Team/Team';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Hero />
       <Separator />
       <TrendingJobs />
+      <Team />
     </>
   );
 }
