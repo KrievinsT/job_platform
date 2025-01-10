@@ -13,17 +13,10 @@ const Separator = () => {
 
   return (
     <div className="logo-separator">
-      <div className="scroll-container">
+      <div className="logo-container">
         {separatorItems.map((src, index) => (
           <img
-            key={`first-${index}`}
-            src={src}
-            alt="separator item"
-          />
-        ))}
-        {separatorItems.map((src, index) => (
-          <img
-            key={`second-${index}`}
+            key={index}
             src={src}
             alt="separator item"
           />
