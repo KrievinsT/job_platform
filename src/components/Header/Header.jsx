@@ -44,7 +44,7 @@ const Header = () => {
         <div className="header__right-section">
           <nav className="header__nav header__nav--desktop">
             <div className="header__nav-links">
-              <a href="/find-jobs" className="header__nav-link">Find Jobs</a>
+              <a href="/jobs" className="header__nav-link">Find Jobs</a>
               <a href="/our-team" className="header__nav-link">Our Team</a>
               <a href="/about" className="header__nav-link">About</a>
               <a href="/contact-us" className="header__nav-link">Contact Us</a>
