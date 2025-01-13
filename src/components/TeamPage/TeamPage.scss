@@ -1,45 +1,102 @@
-// TeamPage.scss
 .team-page {
-    padding-top: 80px; // Account for fixed header
-    background-color: white;
-  
-    &__hero {
-      text-align: center;
-      padding: 4rem 1rem;
-      max-width: 800px;
-      margin: 0 auto;
-    }
-  
-    &__title {
-      font-size: clamp(2.5rem, 5vw, 3.5rem);
-      font-weight: bold;
-      color: #000;
-      margin-bottom: 1rem;
-      line-height: 1.2;
-    }
-  
-    &__subtitle {
-      font-size: clamp(1rem, 2vw, 1.25rem);
-      color: #666;
-      line-height: 1.6;
-    }
-  
-    &__content {
-      max-width: 1400px;
-      margin: 0 auto;
-      padding: 0 1rem 4rem;
-    }
-  
-    &__image-container {
-      width: 100%;
-      border-radius: 1.5rem;
-      overflow: hidden;
-    }
-  
-    &__image {
-      width: 100%;
-      height: auto;
-      display: block;
+  padding-top: 80px; // Account for fixed header
+  background-color: white;
+
+  &__hero {
+    text-align: center;
+    padding: 2rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  &__subtitle {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    color: #666;
+    line-height: 1.6;
+  }
+
+  &__content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1rem 4rem;
+  }
+
+  &__image-container {
+    width: 100%;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    margin-bottom: 3rem;
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  &__description {
+    text-align: left;
+    max-width: 1000px;
+    margin: 0 auto 4rem;
+    padding: 1rem 1rem;
+    
+    p {
+      color: #374151;
+      line-height: 1.8;
+      margin-bottom: 1.5rem;
+      font-size: 1.05rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
     }
   }
-  
+
+  &__stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1rem;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }
+
+  &__stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__stat-label {
+    color: #8B5CF6;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+
+  &__stat-value {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-weight: bold;
+    color: #000;
+    margin-bottom: 0.5rem;
+  }
+
+  &__stat-description {
+    color: #6B7280;
+    font-size: 1.125rem;
+  }
+}
