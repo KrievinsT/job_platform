@@ -8,7 +8,8 @@ import Team from './components/Team/Team';
 import Hire from './components/Hire/Hire';
 import Footer from './components/Footer/Footer';
 import JobsList from './components/JobsList/JobsList';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import TeamPage from './components/TeamPage/TeamPage';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';  
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           </>
         } />
         <Route path="/jobs" element={<JobsList />} />
+        <Route path="/our-team" element={<TeamPage />} />
       </Routes>
     </Router>
   );

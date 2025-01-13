@@ -1,3 +1,4 @@
+// JobsList.jsx
 import React from 'react';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
@@ -54,10 +55,10 @@ const JobsList = () => {
   ];
 
   return (
-    <div className="jobs-page">
+    <div className="page-wrapper">
       <Header />
       
-      <main className="jobs-content">
+      <div className="page-content">
         <section className="jobs-hero">
           <div className="jobs-hero__container">
             <div className="jobs-hero__background"></div>
@@ -121,7 +122,7 @@ const JobsList = () => {
             </div>
           ))}
         </section>
-      </main>
+      </div>
 
       <Footer />
     </div>

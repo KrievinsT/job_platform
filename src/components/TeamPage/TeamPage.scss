@@ -1,0 +1,45 @@
+// TeamPage.scss
+.team-page {
+    padding-top: 80px; // Account for fixed header
+    background-color: white;
+  
+    &__hero {
+      text-align: center;
+      padding: 4rem 1rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  
+    &__title {
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-weight: bold;
+      color: #000;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+  
+    &__subtitle {
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      color: #666;
+      line-height: 1.6;
+    }
+  
+    &__content {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 1rem 4rem;
+    }
+  
+    &__image-container {
+      width: 100%;
+      border-radius: 1.5rem;
+      overflow: hidden;
+    }
+  
+    &__image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  }
+  
