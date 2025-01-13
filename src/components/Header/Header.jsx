@@ -1,3 +1,4 @@
+// Header.jsx
 import React, { useState } from 'react';
 import './Header.scss';
 import { Search, Menu, X } from 'lucide-react';
@@ -5,6 +6,25 @@ import { Search, Menu, X } from 'lucide-react';
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const dropdownItems = [
+    {
+      title: 'Landing page',
+      items: ['Primary', 'Corporate', 'Minimal']
+    },
+    {
+      title: 'Job search',
+      items: ['Primary List', 'Corporate List', 'Minimal List', 'Sidebar List']
+    },
+    {
+      title: 'Job and profile',
+      items: ['Job Primary', 'Job Centered', 'Job Minimal', 'Profile Modern', 'Profile Centered']
+    },
+    {
+      title: 'Misc',
+      items: ['Style Guide', 'Apply For a Job', 'Coming Soon', '404 Page']
+    }
+  ];
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
@@ -21,50 +41,61 @@ const Header = () => {
           />
         </div>
 
-        <nav className="header__nav header__nav--desktop">
-          <div className="header__nav-links">
-            <a href="/find-jobs" className="header__nav-link">Find Jobs</a>
-            <a href="/our-team" className="header__nav-link">Our Team</a>
-            <a href="/about" className="header__nav-link">About</a>
-            <a href="/contact-us" className="header__nav-link">Contact Us</a>
-            <div 
-              className="header__nav-dropdown"
-              onMouseEnter={() => setIsDropdownOpen(true)}
-              onMouseLeave={() => setIsDropdownOpen(false)}
-            >
-              <button className="header__nav-link header__nav-dropdown-trigger">
-                All Pages
-                <svg 
-                  width="12" 
-                  height="12" 
-                  viewBox="0 0 24 24" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  strokeWidth="2" 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round"
-                >
-                  <path d="m6 9 6 6 6-6"/>
-                </svg>
-              </button>
-              {isDropdownOpen && (
-                <div className="header__nav-dropdown-content">
-                  <a href="/about" className="header__nav-dropdown-item">About us</a>
-                  <a href="/career" className="header__nav-dropdown-item">Career</a>
-                  <a href="/blog" className="header__nav-dropdown-item">Blog</a>
-                  <a href="/faq" className="header__nav-dropdown-item">FAQ</a>
-                  <a href="/review" className="header__nav-dropdown-item">Review</a>
-                </div>
-              )}
+        <div className="header__right-section">
+          <nav className="header__nav header__nav--desktop">
+            <div className="header__nav-links">
+              <a href="/find-jobs" className="header__nav-link">Find Jobs</a>
+              <a href="/our-team" className="header__nav-link">Our Team</a>
+              <a href="/about" className="header__nav-link">About</a>
+              <a href="/contact-us" className="header__nav-link">Contact Us</a>
+              <div 
+                className="header__nav-dropdown"
+                onMouseEnter={() => setIsDropdownOpen(true)}
+                onMouseLeave={() => setIsDropdownOpen(false)}
+              >
+                <button className="header__nav-link header__nav-dropdown-trigger">
+                  All Pages
+                  <svg 
+                    width="12" 
+                    height="12" 
+                    viewBox="0 0 24 24" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    strokeWidth="2" 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round"
+                  >
+                    <path d="m6 9 6 6 6-6"/>
+                  </svg>
+                </button>
+                {isDropdownOpen && (
+                  <div className="header__nav-dropdown-content">
+                    {dropdownItems.map((category) => (
+                      <div key={category.title} className="header__nav-dropdown-category">
+                        <div className="header__nav-dropdown-category-title">{category.title}</div>
+                        {category.items.map((item) => (
+                          <a 
+                            key={item} 
+                            href={`/${item.toLowerCase().replace(/\s+/g, '-')}`} 
+                            className="header__nav-dropdown-item"
+                          >
+                            {item}
+                          </a>
+                        ))}
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
-          </div>
-        </nav>
+          </nav>
 
-        <div className="header__actions">
-          <button className="header__search-btn">
-            <Search size={20} />
-          </button>
-          <a href="/purchase" className="header__purchase-btn">Purchase</a>
+          <div className="header__actions">
+            <button className="header__search-btn">
+              <Search size={20} />
+            </button>
+            <a href="/purchase" className="header__purchase-btn">Purchase</a>
+          </div>
         </div>
 
         <button 
@@ -81,21 +112,20 @@ const Header = () => {
             <a href="/about" className="header__nav-mobile-link">About</a>
             <a href="/contact-us" className="header__nav-mobile-link">Contact Us</a>
             <div className="header__nav-mobile-dropdown">
-              <div className="header__nav-mobile-dropdown-trigger">
-                All Pages
-                <svg 
-                  width="12" 
-                  height="12" 
-                  viewBox="0 0 24 24" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  strokeWidth="2" 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round"
-                >
-                  <path d="m6 9 6 6 6-6"/>
-                </svg>
-              </div>
+              {dropdownItems.map((category) => (
+                <div key={category.title} className="header__nav-mobile-category">
+                  <div className="header__nav-mobile-category-title">{category.title}</div>
+                  {category.items.map((item) => (
+                    <a 
+                      key={item} 
+                      href={`/${item.toLowerCase().replace(/\s+/g, '-')}`} 
+                      className="header__nav-mobile-link"
+                    >
+                      {item}
+                    </a>
+                  ))}
+                </div>
+              ))}
             </div>
           </nav>
         </div>
