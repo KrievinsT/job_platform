@@ -1,4 +1,3 @@
-// src/pages/JobsList/JobsList.jsx
 import React from 'react';
 import Header from '../../components/Header/Header';
 import Footer from '../../components/Footer/Footer';
@@ -9,7 +8,7 @@ const JobsList = () => {
   const jobs = [
     {
       id: 1,
-      title: "Product Manager",
+      title: "Senior Product Manager",
       location: "New York, NY",
       type: "Remote",
       salary: "$165,600",
@@ -25,7 +24,33 @@ const JobsList = () => {
       tags: ["Business", "Marketing", "Project"],
       date: "Aug 18, 2023"
     },
-    // Add more jobs as needed
+    {
+      id: 3,
+      title: "Senior Software Engineer",
+      location: "Brooklyn, NY", 
+      type: "Hybrid",
+      salary: "$185,000",
+      tags: ["React", "Node.js", "TypeScript"],
+      date: "Aug 19, 2023"
+    },
+    {
+      id: 4,
+      title: "UX/UI Designer",
+      location: "Manhattan, NY",
+      type: "On-site",
+      salary: "$145,000",
+      tags: ["Design", "Figma", "User Research"],
+      date: "Aug 20, 2023"
+    },
+    {
+      id: 5,
+      title: "Data Scientist",
+      location: "Jersey City, NJ",
+      type: "Remote",
+      salary: "$175,000",
+      tags: ["Python", "Machine Learning", "SQL"],
+      date: "Aug 21, 2023"
+    }
   ];
 
   return (
