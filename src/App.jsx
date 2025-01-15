@@ -9,6 +9,7 @@ import Hire from './components/Hire/Hire';
 import Footer from './components/Footer/Footer';
 import JobsList from './components/JobsList/JobsList';
 import TeamPage from './components/TeamPage/TeamPage';
+import About from './components/About/About';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';  
 
 function App() {
@@ -28,6 +29,7 @@ function App() {
         } />
         <Route path="/jobs" element={<JobsList />} />
         <Route path="/our-team" element={<TeamPage />} />
+        <Route path="/about" element={<About />} />
       </Routes>
     </Router>
   );

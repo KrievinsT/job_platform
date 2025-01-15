@@ -1,0 +1,121 @@
+.about {
+    padding-top: 64px; // Height of the header
+    
+    &__hero {
+      background-color: #f8f9fa;
+      padding: 4rem 0;
+      text-align: center;
+  
+      @media (max-width: 768px) {
+        padding: 3rem 0;
+      }
+    }
+  
+    &__hero-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+  
+      @media (max-width: 480px) {
+        padding: 0 1rem;
+      }
+    }
+  
+    &__hero-content {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  
+    &__hero-title {
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-weight: bold;
+      color: #111827;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+  
+    &__hero-subtitle {
+      font-size: clamp(0.75rem, 1.5vw, 1.25rem);
+      color: #6b7280;
+      line-height: 1.6;
+      margin-bottom: 4rem;
+    }
+  
+    &__content {
+      max-width: 1000px; // Reduced from 1200px
+      margin: -4rem auto 0;
+      position: relative;
+      padding: 0 2rem;
+  
+      @media (max-width: 768px) {
+        margin-top: -2rem;
+        padding: 0 1rem;
+      }
+    }
+  
+    &__image-container {
+      border-radius: 1rem;
+      overflow: hidden;
+      margin: 0 auto 4rem;
+      width: 90%; // Controls the width of the image container
+      max-width: 1000px; // Maximum width of the image
+      max-height: 350px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+                  0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  
+      @media (max-width: 768px) {
+        width: 95%;
+        margin-bottom: 3rem;
+      }
+    }
+  
+    &__image {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+  
+    &__info {
+      padding: 0 0 4rem;
+  
+      @media (max-width: 768px) {
+        padding: 0 0 3rem;
+      }
+    }
+  
+    &__info-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+  
+    &__info-title {
+      font-size: 1.875rem;
+      font-weight: 600;
+      color: #111827;
+      margin-bottom: 1rem;
+      margin-top: 2.5rem;
+  
+      &:first-child {
+        margin-top: 0;
+      }
+  
+      @media (max-width: 768px) {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+        margin-top: 2rem;
+      }
+    }
+  
+    &__info-text {
+      font-size: 1.125rem;
+      color: #4b5563;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+  
+      @media (max-width: 768px) {
+        font-size: 1rem;
+        line-height: 1.6;
+        margin-bottom: 1.25rem;
+      }
+    }
+  }
