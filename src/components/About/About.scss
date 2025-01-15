@@ -1,5 +1,5 @@
 .about {
-    padding-top: 64px; // Height of the header
+    padding-top: 64px;
     
     &__hero {
       background-color: #f8f9fa;
@@ -42,7 +42,7 @@
     }
   
     &__content {
-      max-width: 1000px; // Reduced from 1200px
+      max-width: 1400px;
       margin: -4rem auto 0;
       position: relative;
       padding: 0 2rem;
@@ -57,65 +57,122 @@
       border-radius: 1rem;
       overflow: hidden;
       margin: 0 auto 4rem;
-      width: 90%; // Controls the width of the image container
-      max-width: 1000px; // Maximum width of the image
-      max-height: 350px;
+      width: 100%;
+      max-width: 1400px;
+      height: 500px;
       box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
                   0 2px 4px -1px rgba(0, 0, 0, 0.06);
   
       @media (max-width: 768px) {
-        width: 95%;
         margin-bottom: 3rem;
+        height: 300px;
       }
     }
   
     &__image {
       width: 100%;
-      height: auto;
+      height: 100%;
+      object-fit: cover;
       display: block;
     }
   
-    &__info {
-      padding: 0 0 4rem;
+    &__missions-values-wrapper {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding-bottom: 4rem; // Add padding before footer
+    }
+  
+    &__missions-values {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
   
       @media (max-width: 768px) {
-        padding: 0 0 3rem;
+        grid-template-columns: 1fr;
       }
     }
   
-    &__info-container {
-      max-width: 800px;
-      margin: 0 auto;
+    &__left-column {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
     }
   
-    &__info-title {
-      font-size: 1.875rem;
+    &__section {
+      background-color: #f8f9fa;
+      padding: 2rem;
+      border-radius: 1rem;
+    }
+  
+    &__section-title {
+      font-size: 1.5rem;
       font-weight: 600;
       color: #111827;
       margin-bottom: 1rem;
-      margin-top: 2.5rem;
+      text-align: center;
+    }
   
-      &:first-child {
-        margin-top: 0;
-      }
+    &__section-text {
+      color: #4b5563;
+      line-height: 1.6;
+      text-align: center;
+    }
   
+    &__testimonial {
+      height: 81%;
+      background-image: url('https://framerusercontent.com/images/8Y0gwv74VicAJEn8Ny1w5SLozU.webp?scale-down-to=1024');
+      background-size: cover;
+      background-position: center;
+      padding: 3rem;
+      border-radius: 1rem;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      
       @media (max-width: 768px) {
-        font-size: 1.5rem;
-        margin-bottom: 0.75rem;
-        margin-top: 2rem;
+        padding: 2rem;
+        min-height: 300px;
       }
     }
   
-    &__info-text {
-      font-size: 1.125rem;
-      color: #4b5563;
-      line-height: 1.7;
-      margin-bottom: 1.5rem;
+    &__testimonial-text {
+      font-size: 1.5rem;
+      line-height: 1.4;
+      margin-bottom: 2rem;
+      font-weight: 500;
   
       @media (max-width: 768px) {
-        font-size: 1rem;
-        line-height: 1.6;
-        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
       }
+    }
+  
+    &__testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+  
+    &__testimonial-image {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  
+    &__testimonial-info {
+      display: flex;
+      flex-direction: column;
+    }
+  
+    &__testimonial-name {
+      font-weight: 600;
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+  
+    &__testimonial-position {
+      font-size: 0.875rem;
+      opacity: 0.9;
     }
   }
