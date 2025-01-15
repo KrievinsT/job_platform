@@ -43,12 +43,11 @@
   
     &__content {
       max-width: 1400px;
-      margin: -4rem auto 0;
+      margin: 0 auto;
       position: relative;
       padding: 0 2rem;
   
       @media (max-width: 768px) {
-        margin-top: -2rem;
         padding: 0 1rem;
       }
     }
@@ -79,7 +78,30 @@
     &__missions-values-wrapper {
       max-width: 1000px;
       margin: 0 auto;
-      padding-bottom: 4rem; // Add padding before footer
+      padding-bottom: 4rem;
+    }
+  
+    &__intro {
+      margin-bottom: 5rem;
+      text-align: left;
+    }
+  
+    &__intro-title {
+      font-size: 1.125rem;
+      color: #9333EA;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+  
+    &__intro-text {
+      font-size: clamp(1.25rem, 2.3vw, 1.85rem);
+      color: #111827;
+      line-height: 1.3;
+      font-weight: 500;
+  
+      @media (max-width: 768px) {
+        font-size: 1.25rem;
+      }
     }
   
     &__missions-values {
@@ -175,4 +197,121 @@
       font-size: 0.875rem;
       opacity: 0.9;
     }
-  }
+  
+    &__offices {
+      max-width: 1400px;
+      margin: 6rem auto;
+      padding: 0 2rem;
+  
+      @media (max-width: 768px) {
+        margin: 4rem auto;
+        padding: 0 1rem;
+      }
+    }
+  
+    &__offices-title {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #111827;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+  
+    &__offices-subtitle {
+      font-size: 1.125rem;
+      color: #6b7280;
+      text-align: center;
+      margin-bottom: 4rem;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  
+    &__offices-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+    }
+  
+    &__office-item {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+  
+      @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+  
+      &--reverse {
+        direction: rtl;
+        
+        .about__office-info {
+          direction: ltr;
+        }
+        
+        @media (max-width: 768px) {
+          direction: ltr;
+        }
+      }
+    }
+  
+    &__office-image-container {
+        width: 100%;
+        height: auto;
+        border-radius: 1rem;
+        overflow: hidden;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+                    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    
+        @media (max-width: 768px) {
+          height: 300px;
+        }
+      }
+    
+      &__office-image {
+        width: 100%;
+        height: 80%;
+        // object-fit: cover;
+      }
+    
+      &__office-info {
+        padding: 2rem;
+        text-align: left;
+      }
+    
+      &__office-header {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: 1.5rem;
+      }
+    
+      &__office-flag {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    
+      &__office-location {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: #111827;
+      }
+    
+      &__office-address,
+      &__office-region,
+      &__office-phone,
+      &__office-postal {
+        color: #6b7280;
+        margin-bottom: 0.75rem;
+        font-size: 1rem;
+        line-height: 1;
+    
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
