@@ -158,6 +158,37 @@ const About = () => {
               </div>
             </div>
           </div>
+
+          <div className="about__hire">
+            <div className="about__hire-content">
+              <div className="about__hire-text">
+                <blockquote className="about__hire-quote">
+                  Our platform is so easy to use. We've hired 40-50 different people worldwide in the past two years.
+                </blockquote>
+                <div className="about__hire-author">
+                  <p className="about__hire-name">Lubosek Hnilo</p>
+                  <p className="about__hire-position">Founder at Workze Inc.</p>
+                </div>
+              </div>
+              <div className="about__hire-image">
+                <img 
+                  src="https://framerusercontent.com/images/tUBZn1yb8AwSXJl6FTNBkaLaw0.jpg?scale-down-to=512" 
+                  alt="Lubosek Hnilo"
+                  className="about__hire-photo" 
+                />
+              </div>
+            </div>
+
+            <div className="about__hire-cta">
+              <div className="about__hire-cta-content">
+                <h2 className="about__hire-cta-title">Ready for your next hire?</h2>
+                <p className="about__hire-cta-text">
+                  Along with conventional advertising and below the line activities, organizations and corporate bodies have come to realize that they need to invest.
+                </p>
+              </div>
+              <button className="about__hire-cta-button">Apply and Start Today</button>
+            </div>
+          </div>
         </div>
       </div>
       <Footer />
