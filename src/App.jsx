@@ -10,6 +10,7 @@ import Footer from './components/Footer/Footer';
 import JobsList from './components/JobsList/JobsList';
 import TeamPage from './components/TeamPage/TeamPage';
 import About from './components/About/About';
+import ContactPage from './components/Contact/Contact';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';  
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
         <Route path="/jobs" element={<JobsList />} />
         <Route path="/our-team" element={<TeamPage />} />
         <Route path="/about" element={<About />} />
+        <Route path="/contact-us" element={<ContactPage />} />
       </Routes>
     </Router>
   );
