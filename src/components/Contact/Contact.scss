@@ -2,6 +2,7 @@
   width: 100%;
   min-height: 600px; 
   background-color: #fff;
+  margin-top: 64px;
   
   &__container {
     width: 100%;
@@ -37,6 +38,87 @@
       height: 300px;
       min-height: 300px; 
     }
+  }
+
+  &__map-overlay {
+    position: absolute;
+    top: 7px;
+    left: 6px;
+    z-index: 1;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.2);
+    max-width: 400px;
+    overflow: hidden;
+  }
+
+  &__map-info {
+    padding: 9px;
+  }
+
+  &__location-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 8px;
+  }
+
+  &__location-details {
+    flex-grow: 1;
+  }
+
+  &__coordinates {
+    color: rgb(26, 115, 232);
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    cursor: pointer;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__map-address {
+    color: rgb(60, 64, 67);
+    font-size: 13px;
+  }
+
+  &__directions-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgb(26, 115, 232);
+    text-decoration: none;
+    font-size: 14px;
+    padding: 4px 8px;
+    border-radius: 8px;
+    white-space: nowrap;
+
+    &:hover {
+      background-color: rgba(26, 115, 232, 0.1);
+    }
+  }
+
+  &__map-link {
+    color: rgb(26, 115, 232);
+    font-size: 14px;
+    text-decoration: none;
+    display: block;
+    padding: 4px 0;
+    margin-top: 8px;
+    text-align: left;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  &__map-icon {
+    display: flex;
+    align-items: center;
+    color: rgb(26, 115, 232);
   }
 
   &__info-section {
