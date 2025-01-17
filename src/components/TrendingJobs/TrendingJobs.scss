@@ -226,7 +226,8 @@
       display: flex;
       flex-wrap: wrap;
       gap: 0.75rem;
-      align-content: flex-start;
+      align-items: center;
+      justify-self: center;
       background: linear-gradient(135deg, #D05D85 0%, #6C24A3 50%, #FF6B00 100%);
       padding: 2.5rem;
       border-radius: 1rem;

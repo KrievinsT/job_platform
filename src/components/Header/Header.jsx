@@ -106,7 +106,7 @@ const Header = () => {
 
         <div className={`header__nav-mobile ${isMobileMenuOpen ? 'header__nav-mobile--open' : ''}`}>
           <nav className="header__nav-mobile-content">
-            <a href="/find-jobs" className="header__nav-mobile-link">Find Jobs</a>
+            <a href="/jobs" className="header__nav-mobile-link">Find Jobs</a>
             <a href="/our-team" className="header__nav-mobile-link">Our Team</a>
             <a href="/about" className="header__nav-mobile-link">About</a>
             <a href="/contact-us" className="header__nav-mobile-link">Contact Us</a>
