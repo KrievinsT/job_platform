@@ -1,4 +1,3 @@
-// Header.jsx
 import React, { useState } from 'react';
 import './Header.scss';
 import { Search, Menu, X } from 'lucide-react';
@@ -34,12 +33,12 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header__container">
-        <div className="header__logo">
+        <a href="/" className="header__logo">
           <img 
             src="https://framerusercontent.com/modules/ep5NRmNv6qcNQn7IC5lJ/f5fbtiYACgLORPZENIga/assets/0mBgJmpKBfrVMW7TzdewceK3reg.png" 
             alt="WORKZE"
           />
-        </div>
+        </a>
 
         <div className="header__right-section">
           <nav className="header__nav header__nav--desktop">
