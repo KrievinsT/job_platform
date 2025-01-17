@@ -1,8 +1,8 @@
-import React from 'react';
-import { Phone, Mail } from 'lucide-react';
-import Header from '../Header/Header';
-import Footer from '../Footer/Footer';
-import './Contact.scss';
+import React from "react";
+import { Phone, Mail } from "lucide-react";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
+import "./Contact.scss";
 
 const ContactPage = () => {
   return (
@@ -20,31 +20,33 @@ const ContactPage = () => {
                 referrerPolicy="no-referrer-when-downgrade"
               />
             </div>
-            
+
             <div className="contact__info-section">
               <div className="contact__info-content">
                 <h1>Contact Us</h1>
                 <p className="contact__description">
-                  Become our team member, apply for the job post today 
-                  and send us your detailed CV.
+                  Become our team member, apply for the job post today and send
+                  us your detailed CV.
                 </p>
-                
+
                 <div className="contact__info-box">
-                  <h2>Headquarter office</h2>
-                  <div className="contact__address">
-                    <p>Storkower Strasse 41</p>
-                    <p>Rheinland-Pfalz</p>
-                    <p>56379</p>
-                    <div className="contact__location">
-                      <p>Germany, Berlin</p>
-                      <img 
-                        src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1IDMiPjxwYXRoIGQ9Ik0wIDBoNXYxSDB6IiBmaWxsPSIjMDAwIi8+PHBhdGggZD0iTTAgMWg1djFIMHoiIGZpbGw9IiNERTAwMDAiLz48cGF0aCBkPSJNMCAyaDV2MUgweiIgZmlsbD0iI0ZGQ0UwMCIvPjwvc3ZnPg=="
-                        alt="German flag"
-                        className="contact__flag"
-                      />
+                  <div className="contact__office-section">
+                    <h2>Headquarter office</h2>
+                    <div className="contact__address">
+                      <p>Storkower Strasse 41</p>
+                      <p>Rheinland-Pfalz</p>
+                      <p>56379</p>
+                      <div className="contact__location">
+                        <p>Germany, Berlin</p>
+                        <img
+                          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1IDMiPjxwYXRoIGQ9Ik0wIDBoNXYxSDB6IiBmaWxsPSIjMDAwIi8+PHBhdGggZD0iTTAgMWg1djFIMHoiIGZpbGw9IiNERTAwMDAiLz48cGF0aCBkPSJNMCAyaDV2MUgweiIgZmlsbD0iI0ZGQ0UwMCIvPjwvc3ZnPg=="
+                          alt="German flag"
+                          className="contact__flag"
+                        />
+                      </div>
                     </div>
                   </div>
-                  
+
                   <div className="contact__details">
                     <div className="contact__detail-item">
                       <div className="contact__icon">
@@ -55,7 +57,7 @@ const ContactPage = () => {
                         <p>Call us</p>
                       </div>
                     </div>
-                    
+
                     <div className="contact__detail-item">
                       <div className="contact__icon">
                         <Mail size={18} />
